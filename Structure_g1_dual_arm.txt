@@ -1,0 +1,31 @@
+# "F" stands for fixed joint and "R" stands for revolute joint
+# Two 7-DOF arms 
+g1_dual_arm
+└── waist_yaw_link
+    ├── imu_in_pelvis              (F) imu_in_pelvis_joint
+    └── waist_roll_link            (F) waist_roll_joint
+        └── torso_link             (F) waist_pitch_joint
+            ├── logo_link          (F) logo_joint
+            ├── head_link          (F) head_joint
+            ├── waist_support_link (F) waist_support_joint
+            ├── imu_in_torso       (F) imu_in_torso_joint
+            ├── d435_link          (F) d435_joint
+            ├── mid360_link        (F) mid360_joint
+            ├── LEFT ARM
+            │   └── left_shoulder_pitch_link   (R) left_shoulder_pitch_joint
+            │       └── left_shoulder_roll_link (R) left_shoulder_roll_joint
+            │           └── left_shoulder_yaw_link  (R) left_shoulder_yaw_joint
+            │               └── left_elbow_link        (R) left_elbow_joint
+            │                   └── left_wrist_roll_link   (R) left_wrist_roll_joint
+            │                       └── left_wrist_pitch_link  (R) left_wrist_pitch_joint
+            │                           └── left_wrist_yaw_link    (R) left_wrist_yaw_joint
+            │                               └── left_rubber_hand    (F) left_hand_palm_joint # Tip of left hand
+            └── RIGHT ARM
+                └── right_shoulder_pitch_link  (R) right_shoulder_pitch_joint
+                    └── right_shoulder_roll_link  (R) right_shoulder_roll_joint
+                        └── right_shoulder_yaw_link   (R) right_shoulder_yaw_joint
+                            └── right_elbow_link         (R) right_elbow_joint
+                                └── right_wrist_roll_link    (R) right_wrist_roll_joint
+                                    └── right_wrist_pitch_link   (R) right_wrist_pitch_joint
+                                        └── right_wrist_yaw_link     (R) right_wrist_yaw_joint
+                                            └── right_rubber_hand     (F) right_hand_palm_joint # Tip of right hand
